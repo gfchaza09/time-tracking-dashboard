@@ -41,45 +41,29 @@ const showInfo = (time, data) => {
     }
 }
 
-const select = (button) => {
-    button.addEventListener("click",()=> {
-        button.style.color = "#fff";
-    })
-}
-
-const deselect = (button1, button2) => {
-    button1.style.color = "hsl(235, 45%, 61%)";
-    button2.style.color = "hsl(235, 45%, 61%)";
+const resetColor = (btnArr) => {
+    for (let i=0; i<2; i++) {
+        btnArr[i].classList.remove("select")
+    }
 }
 
 getData("weekly");
-
-dailyButton.addEventListener("mouseover",()=>{
-    select(dailyButton);
-});
-
-weeklyButton.addEventListener("mouseover",()=>{
-    select(weeklyButton);
-});
-
-monthlyButton.addEventListener("mouseover",()=>{
-    select(monthlyButton);
-});
+weeklyButton.classList.add("select");
 
 dailyButton.addEventListener("click",()=>{
     getData("daily");
-    select(dailyButton);
-    deselect(weeklyButton,monthlyButton);
+    dailyButton.classList.add("select");
+    resetColor([weeklyButton, monthlyButton]);
 });
 
 weeklyButton.addEventListener("click",()=>{
     getData("weekly");
-    select(weeklyButton);
-    deselect(dailyButton,monthlyButton);
+    weeklyButton.classList.add("select");
+    resetColor([dailyButton, monthlyButton]);
 });
 
 monthlyButton.addEventListener("click",()=>{
     getData("monthly");
-    select(monthlyButton);
-    deselect(weeklyButton,dailyButton);
+    monthlyButton.classList.add("select");
+    resetColor([weeklyButton, dailyButton]);
 });

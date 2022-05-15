@@ -5,18 +5,25 @@ body {
     background: hsl(226, 43%, 10%);
 }
 
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container-grid {
     display: block;
-    max-width: 720px;
+    max-width: 920px;
     width: 100%;
     margin: 100px auto;
 }
 
 .grid {
     display: grid;
-    grid-template-rows: repeat(2, minmax(100px, 200px));
-    grid-template-columns: repeat(4, 180px);
-    grid-gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
 }
 
 .grid-item {
@@ -29,19 +36,22 @@ body {
 }
 
 .report {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0;
     width: 100%;
-    height: 65%;
+    height: 70%;
     background: hsl(246, 80%, 60%);
     border-radius: 10px;
-    padding: 25px;
+    padding: 2rem 2rem 5rem;
 }
 
 #user-photo-frame {
     border: 2px solid #fff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     margin-left: -5px;
 }
 
@@ -49,41 +59,38 @@ body {
     object-fit: cover;
 }
 
-h6 {
-    color: hsl(236, 100%, 87%);
-    font-size: 11px;
-    font-weight: normal;
-}
-
 #report-title {
+    color: hsl(236, 100%, 87%);
+    font-size: 12px;
     margin-top: 30px;
 }
 
 #name-user {
-    margin-top: 5px;
-    font-weight: normal;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: .25rem;
+    line-height: 1.2;
+    letter-spacing: 1px;
 }
 
 ul {
-    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     list-style: none;
     color: hsl(236, 100%, 87%);
     font-size: 14px;
-    margin-top: 20px;
+    padding: 1.5rem;
 }
 
 li {
+    font-size: 16px;
     color: hsl(235, 45%, 61%);
-    padding: 5px;
-    margin: 10px 15px;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 li:hover {
-    color: #fff;
-}
-
-li:focus {
     color: #fff;
 }
 
@@ -120,9 +127,9 @@ li:focus {
     background-color: hsl(235, 46%, 20%);
     width: 100%;
     height: 80%;
-    margin-top: 23%;
+    margin-top: 44px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 1.5rem;
     cursor: pointer;
 }
 
@@ -130,16 +137,21 @@ li:focus {
     background-color: #34397b;
 }
 
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
 .card-title {
-    display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .options {
-    width: 13px;
-    height: 3px;
-    float: right;
-    margin-top: 10px;
+    width: 16px;
+    height: 4px;
     cursor: pointer;
 }
 
@@ -147,63 +159,117 @@ li:focus {
     filter: brightness(100);
 }
 
-.data-time {
-    font-weight: normal;
-    margin-bottom: 10px;
+.options:hover .data-card {
+    background-color: hsl(235, 46%, 20%);
 }
 
-@media only screen and (max-width: 375px) {
-    
+.data-time {
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 3rem;
+}
+
+.previous-time {
+    font-weight: 400;
+    color: #BBBEEE;
+    font-size: 12px;
+}
+
+.select {
+    color: #fff;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width: 768px) {
+
+    .main {
+        height: auto;
+    }
+
     .container-grid {
-        margin-top: 80px;
-        margin-bottom: 0px;
-        padding: 0px 20px;
+        padding: 1rem;
     }
 
     .grid {
-        grid-template-rows: 180px repeat(7, 140px);
+        grid-template-rows: 180px repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-item:nth-child(1) {
+        grid-row: 1 / 1;
+        grid-column: 1 / 3; 
+    }
+
+    .report {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .report-user {
+        margin-left: 1rem;
+    }
+
+    ul {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:480px) {
+    #name-user {
+        font-size: 1.5rem;
+    }
+
+    .data-time {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    
+    .main {
+        height: auto;
+    }
+
+    .container-grid {
+        width: auto;
+        padding: 0rem;
+        margin-top: 80px;
+        margin-bottom: 0px;
+    }
+
+    .grid {
+        grid-template-rows: 180px repeat(7, 1fr);
         grid-template-columns: minmax(290px,300px);
     }
 
     .grid-item:nth-child(1) {
-        grid-row: 1 / 1; 
+        grid-column: 1 / 1;
     }
 
     .report {
-        position: relative;
-    }
-
-    #user-photo-frame {
-        position: absolute;
-        top: 30px;
-        left: 25px;
-    }
-
-    #report-title, #name-user {
-        position: absolute;
+        align-items: center;
+        padding: 1rem;
+        height: 65%;
     }
 
     #report-title {
-        top: 10px;
-        right: 150px;
         font-size: 13px;
     }
 
     #name-user {
-        top: 50px;
-        right: 40px;
-        font-size: 24px;
+        font-size: 1.5rem;
+        margin-top: 0px;
+        letter-spacing: 0px;
     }
 
     ul {
-        margin-top: 4px;
-        text-align: center;
         font-size: 17px;
-    }
-
-    li {
-        display: inline-block;
-        margin: 12px 16px;
+        padding: 1.5rem 2rem;
+        justify-content: space-between;
     }
 
     .work, .play, .study, .social, .self-care {
@@ -211,7 +277,7 @@ li:focus {
     }
 
     .title {
-        margin-top: 5px;
+        margin-bottom: 0rem;
     }
 
     .options {
@@ -225,28 +291,22 @@ li:focus {
 
     .data-card {
         height: 77.5%;
-        margin-top: 11%;
+        padding: 2rem 1.5rem 1.5rem;
+        margin-top: 13%;
     }
 
     .data-time {
-        margin-top: 5px;
-        font-size: 30px;
+        margin-top: 8px;
+        font-size: 2rem;
     }
 
     .card-data-time {
-        position: relative;
-    }
-
-    .data-time {
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .previous-time {
-        position: absolute;
-        top: 15px;
-        right: 0;
         font-size: 14px;
     }
 }

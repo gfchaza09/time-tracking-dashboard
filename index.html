@@ -9,118 +9,121 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
   <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet" />
   
 </head>
 <body>
 
-  <div class="container-grid">
-    <div class="grid">
-      <div class="grid-item">
-        <div class="report">
-          <div id="user-photo-frame">
-            <img src="css/images/image-jeremy.png" alt="image-jeremy" id="user-photo"/>
+  <main class="main">
+    <div class="container-grid">
+      <div class="grid">
+        <div class="grid-item">
+          <div class="report">
+            <div id="user-photo-frame">
+              <img src="css/images/image-jeremy.png" alt="image-jeremy" id="user-photo"/>
+            </div>
+            <div class="report-user">
+              <span id="report-title">Report for</span>
+              <h2 id="name-user">Jeremy Robson</h2>
+            </div>
           </div>
-          <h6 id="report-title">Report for</h6>
-          <h2 id="name-user">Jeremy Robson</h2>
+          <ul>
+            <li id="button-daily">Daily</li>
+            <li id="button-weekly">Weekly</li>
+            <li id="button-monthly">Monthly</li>
+          </ul>
         </div>
-        <ul>
-          <li id="button-daily">Daily</li>
-          <li id="button-weekly">Weekly</li>
-          <li id="button-monthly">Monthly</li>
-        </ul>
-      </div>
-
-      <!-- -------------------------CARDS-------------------------------- -->
-      <div class="grid-item work">
-        <div class="data-card">
-          <div class="title"> 
-            <h5 class="card-title"></h5>
-            <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
-          </div>
-          <div class="card-data-time">
-            <h1 class="data-time"></h1>
-            <h6 class="previous-time"></h6>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item play">
-        <div class="data-card">
-          <div class="title"> 
-            <h5 class="card-title"></h5>
-            <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
-          </div>
-          <div class="card-data-time">
-            <h1 class="data-time"></h1>
-            <h6 class="previous-time"></h6>
+  
+        <!-- -------------------------CARDS-------------------------------- -->
+        <div class="grid-item work">
+          <div class="data-card">
+            <div class="title"> 
+              <h5 class="card-title"></h5>
+              <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+            </div>
+            <div class="card-data-time">
+              <h2 class="data-time"></h2>
+              <h6 class="previous-time"></h6>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item study">
-        <div class="data-card">
-          <div class="title"> 
-            <h5 class="card-title"></h5>
-            <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
-          </div>
-          <div class="card-data-time">
-            <h1 class="data-time"></h1>
-            <h6 class="previous-time"></h6>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item exercise">
-        <div class="data-card">
-          <div class="title"> 
-            <h5 class="card-title"></h5>
-            <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
-          </div>
-          <div class="card-data-time">
-            <h1 class="data-time"></h1>
-            <h6 class="previous-time"></h6>
+        <div class="grid-item play">
+          <div class="data-card">
+            <div class="title"> 
+              <h5 class="card-title"></h5>
+              <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+            </div>
+            <div class="card-data-time">
+              <h2 class="data-time"></h2>
+              <h6 class="previous-time"></h6>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item social">
-        <div class="data-card">
-          <div class="title"> 
-            <h5 class="card-title"></h5>
-            <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
-          </div>
-          <div class="card-data-time">
-            <h1 class="data-time"></h1>
-            <h6 class="previous-time"></h6>
+        <div class="grid-item study">
+          <div class="data-card">
+            <div class="title"> 
+              <h5 class="card-title"></h5>
+              <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+            </div>
+            <div class="card-data-time">
+              <h2 class="data-time"></h2>
+              <h6 class="previous-time"></h6>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid-item self-care">
-        <div class="data-card">
-          <div class="title"> 
-            <h5 class="card-title"></h5>
-            <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+        <div class="grid-item exercise">
+          <div class="data-card">
+            <div class="title"> 
+              <h5 class="card-title"></h5>
+              <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+            </div>
+            <div class="card-data-time">
+              <h2 class="data-time"></h2>
+              <h6 class="previous-time"></h6>
+            </div>
           </div>
-          <div class="card-data-time">
-            <h1 class="data-time"></h1>
-            <h6 class="previous-time"></h6>
+        </div>
+        <div class="grid-item social">
+          <div class="data-card">
+            <div class="title"> 
+              <h5 class="card-title"></h5>
+              <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+            </div>
+            <div class="card-data-time">
+              <h2 class="data-time"></h2>
+              <h6 class="previous-time"></h6>
+            </div>
+          </div>
+        </div>
+        <div class="grid-item self-care">
+          <div class="data-card">
+            <div class="title"> 
+              <h5 class="card-title"></h5>
+              <img class="options" src="css/images/icon-ellipsis.svg" alt="options">
+            </div>
+            <div class="card-data-time">
+              <h2 class="data-time"></h2>
+              <h6 class="previous-time"></h6>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/gabriel-chazarreta/" target="_blank">Gabriel Chazarreta</a>.
+    </div>
+  </footer>
 
   <script type="text/javascript" src="data.json"></script>
   <script src="js/code.js"></script>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/gabriel-chazarreta/" target="_blank">Gabriel Chazarreta</a>.
-  </div>
 </body>
 </html>
