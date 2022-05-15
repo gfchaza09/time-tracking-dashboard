@@ -10,7 +10,7 @@ const previousTime = document.querySelectorAll(".previous-time");
 const cardTitle = document.querySelectorAll(".card-title");
 
 const getData = async (time) => {
-    const response = await fetch("../data.json");
+    const response = await fetch("data.json");
     if (response.status === 200) {
       const data = await response.json();
       showTitles(data);
