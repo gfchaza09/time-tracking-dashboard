@@ -9,7 +9,7 @@ export const Card = ({title, time}) => {
         <div className="data-card">
             <div className="title"> 
                 <h2 className="card-title">{title}</h2>
-                <img className="options" src="/assets/icon-ellipsis.svg" alt="options" />
+                <img className="options" src="../../../public/assets/icon-ellipsis.svg" alt="options" />
             </div>
             <div className="card-data-time">
                 <h3 className="data-time">{time.current}hrs</h3>

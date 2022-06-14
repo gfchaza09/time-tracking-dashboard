@@ -52,7 +52,7 @@ import { Card } from './components/Card/Card';
               <div className="grid-item">
                 <div className="report">
                   <div id="user-photo-frame">
-                    <img src="/assets/image-jeremy.png" alt="jeremy-profile" id="user-photo"/>
+                    <img src="../public/assets/image-jeremy.png" alt="jeremy-profile" id="user-photo"/>
                   </div>
                   <div className="report-user">
                     <span id="report-title">Report for</span>
